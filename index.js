@@ -1,17 +1,17 @@
-// let nombre = prompt ("Ingrese su nombre");
-// alert ("Bienvenid@ " + nombre);
+let nombre = prompt ("Ingrese su nombre");
+alert ("Bienvenid@ " + nombre);
 
-// let edad = parseInt (prompt ("¿Cuantos años tienes?")); 
+let edad = parseInt (prompt ("¿Cuantos años tienes?")); 
 
-// if (edad < 10){
-//     alert ("Tenemos libros para niños, esperamos que lo disfrutes");
-// } else if (edad < 16) {
-//     alert ("Tenemos libros para adolescentes, esperamos que lo disfrutes");
-// } else if (edad < 25){
-//     alert ("Tenemos libros para jovenes, esperamos que lo disfrutes");
-// } else {
-//     alert ("Tenemos libros para adultos, esperamos que lo disfrutes");
-// }
+if (edad < 10){
+    alert ("Tenemos libros para niños, esperamos que lo disfrutes");
+} else if (edad < 16) {
+    alert ("Tenemos libros para adolescentes, esperamos que lo disfrutes");
+} else if (edad < 25){
+    alert ("Tenemos libros para jovenes, esperamos que lo disfrutes");
+} else {
+    alert ("Tenemos libros para adultos, esperamos que lo disfrutes");
+}
 
 // function categoria (nombre){
     

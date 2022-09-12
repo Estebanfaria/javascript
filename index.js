@@ -1,86 +1,29 @@
-let nombre = prompt ("Ingrese su nombre");
-alert ("Bienvenid@ " + nombre);
-
-let edad = parseInt (prompt ("¿Cuantos años tienes?")); 
-
-if (edad < 10){
-    alert ("Tenemos libros para niños, esperamos que lo disfrutes");
-} else if (edad < 16) {
-    alert ("Tenemos libros para adolescentes, esperamos que lo disfrutes");
-} else if (edad < 25){
-    alert ("Tenemos libros para jovenes, esperamos que lo disfrutes");
-} else {
-    alert ("Tenemos libros para adultos, esperamos que lo disfrutes");
-}
-
-// function categoria (nombre){
+const productos = [ 
+    { id: 1, nombre: "El intercesor", precio: 1000, tapa: "./multimedia/el intercesor.jpg" },    
+    { id: 2, nombre: "El dia que fui crucificado", precio: 1500, tapa: "./multimedia/51sUzFNeLmL (1).jpg" },   
+    { id: 3, nombre: "Perfil de tres monarcas", precio: 1900,tapa:"./multimedia/41GHUfpN11L._BO1,204,203,200_.jpg" },
+    { id: 4, nombre: "El nacimiento", precio: 2100,tapa:"./multimedia/El nacimiento.jpg" },
+    { id: 5, nombre: "En pos de lo supremo", precio: 2080,tapa:"./multimedia/en pos de lo supremo.jpg" },
+    { id: 6, nombre: "Este poder puede ser tuyo", precio: 2500,tapa:"./multimedia/este-poder_1.webp" },
     
-//     switch (nombre) {
-//         case "paz":
-//         alert("Tenemos el tipo de libro esta buscando");
-//         break;
+];  
 
-//         case "gozo":
-//         alert ("Tenemos el tipo de libro esta buscando");
-//         break;
+let contenedor = document.getElementById ("contenedor");
+let precio = parseInt(prompt("Ingrese el precio minimo"));
 
-//         case "amor":
-//         alert ("Tenemos el tipo de libro esta buscando");
-//         break;
 
-//         case "fe":
-//         alert ("Tenemos el tipo de libro esta buscando");
-//         break;
+let productosFiltrados = productos.filter(item => item.precio > precio);
 
-//         case "esperanza":
-//         alert ("Tenemos el tipo de libro esta buscando");
-//         break;
+for (const producto of productosFiltrados) {
+    let div = document.createElement("div");
+    div.innerHTML = `<h3> ID: ${producto.id}</h3>
+                    <p> Producto: ${producto.nombre}</p>
+                    <b> Precio: ${producto.precio}</b>
+                    <img src="${producto.tapa}" alt="">`; 
+                    
 
-//         case "bibliografico":
-//             alert ("Tenemos el tipo de libro esta buscando");
-//             break;
-
-//         default:
-//             alert ("No tenemos el tipo de libro que esta buscando");
-//             break;
-
-//     }
-// }
-
-// let nombre = prompt("Ingrese el tipo de libro que esta buscando");
-// categoria (nombre);}
-
-const libros = ["El dia en que fui crucificado","Este poder puede ser tuyo","Secretos del avivamiento en Argentina","Tres monarcas", "El nacimiento","En pos de lo supremo","Y todo lo que pidieres","Intercesor",];
-
-libros.push("La fe más allá de la razón");
-console.log(libros.length);
-console.log(libros);
-
-class biblioteca{
-    constructor(id, nombre, precio, img, cantidad){
-        this.id = id
-        this.nombre = nombre.toUpperCase()
-        this.precio = parseFloat(precio)
-        this.img = img
-        this.cantidad = cantidad
-    }
-    sumarIva(){
-        this.precio = this.precio * 1.21
-    }
+    contenedor.append(div);
 }
-
-const stockproductos = []
-
-stockproductos.push(new biblioteca("1","El dia en que fui crucificado",2500, "./multimedia/51sUzFNeLmL (1).jpg",1));
-stockproductos.push(new biblioteca("2","Este poder puede ser tuyo",3500, "./multimedia/este-poder_1.webpllls",4));
-stockproductos.push(new biblioteca("3","SecretoMArtes de un avivamiento en argentina",1500, "./multimedia/secretos-del-avivamiento-en-argentina.webp",22));
-stockproductos.push(new biblioteca("4","tres monarcas",900,"./multimedia/41GHUfpN11L._BO1,204,203,200_.jpg",5));
-stockproductos.push(new biblioteca("5","El nacimiento",4000,"./multimedia/El nacimiento.jpg",6));
-stockproductos.push(new biblioteca("6","En pos de lo supremo",1200,"./multimedia/en pos de lo supremo.jpg",5));
-stockproductos.push(new biblioteca("7","Y todo lo que pidieres",900,"./multimedia/y todo lo que pidieres.webp",10));
-stockproductos.push(new biblioteca("8","Intercesor",1600,"./multimedia/el intercesor.jpg",30));
-stockproductos.push(new biblioteca("9","La fe mas alla de la razon",2100,"./multimedia/la fe.jpg",25));
-
 
 
 

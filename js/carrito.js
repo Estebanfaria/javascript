@@ -1,4 +1,4 @@
-const button = document.getElementById("button");
+/* const button = document.getElementById("button");
 const scoreElement = document.getElementById("score_element");
 
 if(typeof sessionStorage === "undefined"){
@@ -15,4 +15,4 @@ button.onclick = () => {
     const currentScore = sessionStorage.getItem("score");
     sessionStorage.setItem("score", parseInt(currentScore) + 1);
     scoreElement.innerHTML = sessionStorage.getItem("score");
-}
+} */

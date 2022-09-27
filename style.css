@@ -4,7 +4,8 @@
 }
 
 .header {
-    height: 5rem;
+    height: auto;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,6 +16,10 @@
     font-size: 1.4rem;
     color: wheat;
 }
+
+.buscador{
+     margin: 0.5rem;
+} 
 
 .lista {
     background-color: rgb(114, 114, 126);
@@ -39,12 +44,20 @@
 }
 
 .card-img-top {
-    height: 30rem;
+    width: 100%;
+    height: auto;
+    border: solid black 1px;
 }
 
 .numero {
     margin-left: 1rem;
     color: aliceblue;
+}
+
+.button{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1rem;
 }
 
 

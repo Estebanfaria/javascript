@@ -1,4 +1,4 @@
-const libros = [
+const productos = [
     {
         id: 1,
         img:"../multimedia/51sUzFNeLmL (1).jpg" ,

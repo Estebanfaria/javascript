@@ -1,38 +1,32 @@
-const mostrarLibros = (libros) => {
+const mostrarProductos = (productos) => {
+    const contenedorProductos = document.getElementById("producto-contenedor")
 
-    const contenedorLibros = document.getElementById("contenedor-libros");
+    productos.forEach(producto => {
+        const div = document.createElement("div")
+        div.classList.add("card")
+        div.innerHTML += `<div class="card-inside rounded" style="width: 18rem;">
+                            <img src="${producto.img}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">${producto.nombre}</h5>
+                                <p class="card-text">Descripción:  ${producto.autor}</p>
+                                <p class="card-text">${producto.precio}</p>
+                                <button class="btn btn-primary" id=boton${producto.id}>Comprar</button>
+                            </div>
+                        </div>`
 
-    libros.forEach(libro => {
-        const div = document.createElement("div");
-        div.classList.add("card");
-        div.innerHTML += ` 
-                                <div class="card" style="width: 18rem;">
-                                <img src="${libro.img}" class="card-img-top rounded" alt="${libro.nombre}">
-                                <div class="card-body">
-                                    <h5 class="card-title">${libro.nombre}</h5>
-                                    <li class="card-text">${libro.año}</li>
-                                    <li class="card-text">${libro.editorial}</li>
-                                    <li class="card-text">${libro.autor}</li>
-                                    <li class="card-text">${libro.precio}</li>
-                                    <button id="button" type="button" id=boton${libro.id} class="btn btn-success">Comprar</button> 
-                                </div>
-                                </div>
-                            </div>`;
-
-        contenedorLibros.appendChild(div);                    
-    
-        const boton = document.getElementById(`boton${x.id}`);
+        contenedorProductos.appendChild(div)
         
-        boton.addEventListener("click", () =>{
-            // carritoIndex(x.id)
-            alert(`se agregro el producto ${x.nombre}`) 
+        const boton = document.getElementById( `boton${producto.id}` )
+
+        boton.addEventListener('click', ()=> {
+            carritoIndex(producto.id)
         })
-    
-    });
+
+    })
 }
 
-mostrarLibros(libros);
 
+mostrarProductos(productos)
 
 
 

@@ -19,7 +19,15 @@ const mostrarProductos = (productos) => {
         const boton = document.getElementById( `boton${producto.id}` )
 
         boton.addEventListener('click', ()=> {
-            carritoIndex(producto.id)
+            carritoIndex(producto.id);
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Su libro fue añadido al carrito',
+                showConfirmButton: false,
+                timer: 1500,   
+              })
+            
         })
 
     })

@@ -63,11 +63,15 @@
 }
 
 .modal-carrito{
-    width: 50%;
-    height: 50%;
+    width: auto;
+    height: auto;
     background-color: white;
 
     border: solid black;
+}
+
+.carrito{
+    margin: 0.2rem;
 }
 
 

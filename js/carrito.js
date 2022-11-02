@@ -1,3 +1,4 @@
+
 const carritoDeCompras = []
 
 const carritoIndex = (productoId)=>{
@@ -6,20 +7,35 @@ const carritoIndex = (productoId)=>{
 
     const renderProductosCarrito = ()=> {
         let producto  = productos.find( producto => producto.id == productoId )
-        carritoDeCompras.push(producto)
-        console.log(carritoDeCompras);
+        carritoDeCompras.push(producto);
+
+        sessionStorage.setItem("carrito", JSON.stringify(carritoDeCompras))
+
+        let carritoStorage = sessionStorage.getItem("carrito");
+
+        if(carritoStorage){
+            let carrito = JSON.parse(carritoStorage);
+        };
+
 
         producto.cantidad = 1
 
         let div = document.createElement("div")
         div.classList.add("productoEnCarrito")
 
-        div.innerHTML = `<p>${producto.nombre}</p>
-                        <p>Precio: ${producto.precio}</p> 
-                        <p id="cantidad${producto.id}">Cantidad: ${producto.cantidad}</p>
-                        <button id="eliminar${producto.id}" class="boton-eliminar" ><i class="fa-solid fa-trash-can"></i></button>`;
+        div.innerHTML = `<li> Titulo:${producto.nombre}</li>
+                        <li> ${producto.precio}</li> 
+                        <li id="cantidad${producto.id}">Cantidad: ${producto.cantidad}</li>
+                        `;
         contenedorCarrito.appendChild(div)
     }
 
     renderProductosCarrito()
 }
+
+{/* <button id="eliminar${producto.id}" class="boton-eliminar" ><i class="fa-solid fa-trash-can"></i></button> */}
+
+
+
+
+

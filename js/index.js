@@ -33,8 +33,9 @@ const mostrarProductos = (productos) => {
     })
 }
 
+mostrarProductos (productos);
 
-mostrarProductos(productos)
+
 
 
 

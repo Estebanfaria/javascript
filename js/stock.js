@@ -3,7 +3,8 @@ const productos = [
         id: 1,
         img:"../multimedia/51sUzFNeLmL (1).jpg" ,
         nombre:"El dia en que fui crucificado",
-        precio:"Precio: $300" , año: "Año: 14 Abril 2005", 
+        precio:"Precio: $300" , 
+        año: "Año: 14 Abril 2005", 
         editorial: "Editorial: Casa Creación", 
         autor: "Autor: Gene Edwards"
     },
@@ -14,7 +15,7 @@ const productos = [
         precio:"Precio: $597",
         año: "Año: 2007", 
         editorial: "Editorial: Peniel",
-         autor: "Autor: Tommy Hicks"
+        autor: "Autor: Tommy Hicks"
         },
     {
         id: 3,
@@ -23,7 +24,7 @@ const productos = [
         precio:"Precio: $488",
         año: "Año: 2015",
         editorial: "Editorial: Peniel",
-         autor:"Autor: Edward Miller"
+        autor:"Autor: Edward Miller"
         },
     {
         id: 4,
@@ -37,7 +38,8 @@ const productos = [
     {
         id: 5,
         img:"../multimedia/El nacimiento.jpg" ,
-        nombre:"El nacimiento",precio:"Precio: $1.305",
+        nombre:"El nacimiento",
+        precio:"Precio: $1.305",
         año: "Año: 2002", 
         editorial: "Editorial: El Faro", 
         autor: "Autor: Gene Edwards" 
@@ -63,7 +65,8 @@ const productos = [
     {
         id: 8,
         img:"../multimedia/el intercesor.jpg" ,
-        nombre:"Intercesor",precio:"Precio: $982",
+        nombre:"Intercesor",
+        precio:"Precio: $982",
         año: "Año: 2004", 
         editorial: "Editorial: CLC", 
         autor:"Rees Howells"
